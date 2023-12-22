@@ -5,7 +5,8 @@
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <input class="form-control form-control-dark w-100" type="text" placeholder="recherche" aria-label="Search">
+   <h4 class="text-white text-italic">Bienvenue sur la plateforme de gestion de vos documents</h4>
+    {{-- <input class="form-control form-control-dark w-100" type="text" placeholder="recherche" aria-label="Search"> --}}
     <div class="navbar-nav">
         <div class="nav-item text-nowrap" style="position:relative" >
             <a class="nav-link px-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"> <i class="fa fa-user"></i> {{Auth::user()->name}} </a>
