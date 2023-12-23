@@ -61,63 +61,6 @@
                                 $('#' + documentId).html(value.nb_download);
                             }
                         });
-
-
-
-
-                        // if (response.id == parseInt(id)) {
-                        // var documents = {{ Js::from($documents) }}
-                        // var idDoc = document.getElementById(id);
-                        // var value = document.getElementById(id);
-                        // var idFound = document.getElementById(id);
-                        // value = response.nb_download++
-                        // document.getElementById(id).value = value;
-
-                        // var filteredValue = documents.filter(function(item) {
-                        //     return item.id == response.id;
-                        // });
-
-                        // console.log(filteredValue[0].id);
-
-                        // documents.map((doc, index) => {
-                        //     if (doc.id === 1) {
-                        //         documents[index] = {
-                        //             id: 1,
-                        //             name: 'Baba Benny'
-                        //         };
-                        //     }
-                        //     return user
-                        // })
-
-                        // if (response.id == filteredValue[0].id) {
-
-                        //     $('.counter').html(value)
-                        // }
-
-                        // console.log(response.id, filteredValue[0].id);
-
-                        // //    value.id = response.nb_download;
-                        // //    value =  value.innerHtml
-                        //     // console.log(value);
-                        //     var l = $('.counter').find(idFound);
-
-                        //     console.log(l);
-
-                        // var value = document.getElementById(id);
-                        // var increase = response.nb_download++
-                        // value = increase
-
-                        // documents.map((el) => {
-                        //    return {
-                        //         ...el,
-                        //         response.nb_download: id == response.id ? value : nb_download
-                        //     }
-                        // })
-
-                        // console.log(value);
-                        // $('.counter').app(value);
-                        // }
-
                     }
                 });
 
