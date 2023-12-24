@@ -58,7 +58,7 @@
 
                         $.each(response, function (index, value) { 
                             if (value.id == documentId) {
-                                $('#' + documentId).html(value.nb_download);
+                                $('#' + documentId).html(value.nb_download +' Fois');
                             }
                         });
                     }
