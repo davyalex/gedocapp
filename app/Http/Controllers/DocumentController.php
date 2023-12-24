@@ -20,7 +20,7 @@ class DocumentController extends Controller
             ->where('user_id', Auth::user()->id)
             ->orderBy('created_at', 'DESC')
             ->get();
-        // dd($documents->toarray());
+        dd($documents->toarray());
         return view('pages.File.index', compact('documents'));
     }
 
@@ -53,7 +53,9 @@ class DocumentController extends Controller
         ]);
 
         if (request()->has('file')) {
-            $document->addMediaFromRequest('file')->usingFileName($request['title'])->toMediaCollection('files');
+            $extension = $request->file->getClientOriginalExtension();
+            // dd($extension);
+            $document->addMediaFromRequest('file')->usingFileName($request['title'].'.'.$extension)->toMediaCollection('files');
         }
 
         return redirect()->route('document.index')->withSuccess('Document crée avec success');
@@ -120,7 +122,8 @@ class DocumentController extends Controller
         //upload new file
         if ($request->has('file')) {
             $document->clearMediaCollection('files');
-            $document->addMediaFromRequest('file')->usingFileName($request['title'])->toMediaCollection('files');
+            $extension = $request->file->getClientOriginalExtension();
+            $document->addMediaFromRequest('file')->usingFileName($request['title'].'.'.$extension)->toMediaCollection('files');
         }
 
         return redirect()->route('document.index')->withSuccess('Document modifié avec success');
