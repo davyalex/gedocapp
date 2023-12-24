@@ -20,7 +20,7 @@ class DocumentController extends Controller
             ->where('user_id', Auth::user()->id)
             ->orderBy('created_at', 'DESC')
             ->get();
-        dd($documents->toarray());
+        // dd($documents->toarray());
         return view('pages.File.index', compact('documents'));
     }
 
